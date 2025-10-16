@@ -23,7 +23,7 @@ public class AutoreService {
     private AutoreRepository autoreRepository;
 
 
-    public Page<Autore> findAll(int pageNumber, int pageSize, String sortBy) {
+    public Page<Autore> findAll(Integer pageNumber, Integer pageSize, String sortBy) {
         if (pageSize > 20) pageSize = 20;
         Pageable pageable = PageRequest.of(pageNumber, pageSize, Sort.by(sortBy).ascending());
         return this.autoreRepository.findAll(pageable);

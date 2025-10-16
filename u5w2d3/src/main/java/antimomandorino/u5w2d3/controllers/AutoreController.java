@@ -18,9 +18,9 @@ public class AutoreController {
     private AutoreService autoreService;
 
     @GetMapping
-    public Page<Autore> findAll(@RequestParam(defaultValue = "0") int page,
-                                @RequestParam(defaultValue = "10") int size,
-                                @RequestParam(defaultValue = "id") String sortBy) {
+    public Page<Autore> findAll(@RequestParam(defaultValue = "0") Integer page,
+                                @RequestParam(defaultValue = "10") Integer size,
+                                @RequestParam(defaultValue = "autoreId") String sortBy) {
         return this.autoreService.findAll(page, size, sortBy);
     }
 
